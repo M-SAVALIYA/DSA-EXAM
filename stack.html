@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+
+
+        class stack {
+            constructor(milan, maulik) {
+
+                this.milan = [];
+                this.maulik = [];
+
+            }
+
+            Push(number) {
+
+                if (this.milan.length > 5) {
+
+                    console.log("stack overflow");
+
+                }
+                else {
+                    this.milan.push(number)
+                    console.log(this.milan);
+                }
+            }
+
+            printElement(element) {
+
+                this.milan.map((val)=>{
+                    console.log(val);
+                })
+
+            }
+
+            Reverse() {
+
+                for (let i = 0; i < this.milan.length; i++) {
+                    this.maulik[i] = this.milan[this.milan.length - 1 - i]
+                }
+
+                console.log("reverse array", this.maulik);
+        
+            }
+            secondLastElement() {
+                
+                console.log("second last element = ", this.milan[1]);
+            }
+            topElement() {
+                let i = this.milan.length - 1;
+                console.log("top element = ", this.milan[i]);
+            }
+            lastElement() {
+                console.log("last element =", this.milan[0]);
+            }
+        }
+
+        const stack1 = new stack();
+      
+
+        stack1.Push(441)
+        stack1.Push(42)
+        stack1.Push(43)
+        stack1.Push(44)
+        stack1.Push(45)
+        stack1.Push(46)
+        stack1.Push(47)
+        stack1.printElement()
+        stack1.secondLastElement()
+        stack1.topElement()
+        stack1.lastElement()
+        stack1.Reverse()
+
+
+
+    </script>
+
+
+
+</body>
+
+</html>
